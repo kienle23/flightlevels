@@ -425,6 +425,15 @@ This is a static front-end. To go live you'll need to:
     display:flex; align-items:center; justify-content:center;
     overflow:hidden;
   }
+  .gallery-slot.has-photo{
+    border:1px solid rgba(14,30,46,0.1);
+    background:var(--navy-deep);
+  }
+  .gallery-slot img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+  }
   .gallery-slot::before{
     content:"";
     width:38px; height:38px;
@@ -434,11 +443,17 @@ This is a static front-end. To go live you'll need to:
     opacity:0.25;
     position:absolute; top:32%;
   }
+  .gallery-slot.has-photo::before{
+    display:none;
+  }
   .gallery-slot::after{
     content:attr(data-label);
     position:absolute; bottom:14px; left:14px; right:14px;
     font-family:var(--mono); font-size:0.72rem; color:var(--ink-soft);
     text-align:center;
+  }
+  .gallery-slot.has-photo::after{
+    content:none;
   }
 
   /* ---------- Service area ---------- */
@@ -795,15 +810,15 @@ This is a static front-end. To go live you'll need to:
       <div class="section-head">
         <span class="eyebrow">Our Work</span>
         <h2>Before &amp; after, straight off the ramp</h2>
-        <p>Photos from recent jobs — swap these placeholders for your own before/after shots as you complete work.</p>
+        <p>A look at recent work — from polished aluminum to full corporate cabins.</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-slot reveal" data-label="Exterior polish — before &amp; after"></div>
-        <div class="gallery-slot reveal" data-label="Interior detail — cabin"></div>
-        <div class="gallery-slot reveal" data-label="Corporate jet — full detail"></div>
-        <div class="gallery-slot reveal" data-label="Helicopter — exterior wash"></div>
-        <div class="gallery-slot reveal" data-label="Polished aluminum close-up"></div>
-        <div class="gallery-slot reveal" data-label="Ceramic coating application"></div>
+        <div class="gallery-slot reveal has-photo"><img src="images/gallery-exterior-polish.jpg" alt="Polished exterior finish on a Piper Archer LX"></div>
+        <div class="gallery-slot reveal has-photo"><img src="images/gallery-interior-detail.jpg" alt="Detailed corporate jet cabin interior"></div>
+        <div class="gallery-slot reveal has-photo"><img src="images/gallery-corporate-jet.jpg" alt="Full corporate jet detail, wing and fuselage"></div>
+        <div class="gallery-slot reveal has-photo"><img src="images/gallery-helicopter.jpg" alt="Detailed helicopter exterior"></div>
+        <div class="gallery-slot reveal has-photo"><img src="images/gallery-polished-aluminum.jpg" alt="Polished aluminum propeller and spinner close-up"></div>
+        <div class="gallery-slot reveal has-photo"><img src="images/gallery-ceramic-coating.jpg" alt="Ceramic-coated jet wing with a glossy finish"></div>
       </div>
     </div>
   </section>
