@@ -35,7 +35,7 @@ This is a static front-end. To go live you'll need to:
   "description": "Pilot-owned mobile aircraft detailing serving general aviation and corporate aircraft in the Columbus, Ohio area.",
   "telephone": "+1-614-555-0142",
   "priceRange": "$$",
-  "areaServed": ["Columbus, OH", "John Glenn Columbus International Airport (CMH)", "Ohio State University Airport (OSU)", "Bolton Field (TZR)", "Rickenbacker International Airport (LCK)", "Newark-Heath Airport (VTA)", "Lancaster Municipal Airport (LHQ)", "Delaware Municipal Airport (DLZ)", "Marion Municipal Airport (MRT)"],
+  "areaServed": ["Columbus, OH", "John Glenn Columbus International Airport (CMH)", "Ohio State University Airport (OSU)", "Bolton Field (TZR)", "Rickenbacker International Airport (LCK)", "Licking County Airport (VTA)", "Fairfield County Airport (LHQ)", "Delaware Municipal Airport (DLZ)", "Union County Airport (MRT)"],
   "makesOffer": [
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aircraft Exterior Wash & Polish"}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aircraft Interior Detailing"}},
@@ -214,6 +214,7 @@ This is a static front-end. To go live you'll need to:
     font-family:var(--mono); font-weight:600; font-size:0.88rem;
     padding:9px 14px; border:1.5px solid rgba(255,255,255,0.25); border-radius:8px;
     white-space:nowrap; flex-shrink:0;
+    word-spacing:-0.25em;
   }
   .call-pill svg{width:16px; height:16px; color:var(--amber);}
   .call-pill:hover{border-color:var(--amber);}
@@ -471,6 +472,7 @@ This is a static front-end. To go live you'll need to:
   .quote-side .call-block .big-phone{
     font-family:var(--mono); font-size:1.5rem; font-weight:600; color:var(--amber);
     display:block; margin:8px 0 14px;
+    word-spacing:-0.3em;
   }
   .quote-form{
     background:var(--white); border-radius:14px; padding:28px 24px; box-shadow:var(--shadow);
@@ -824,11 +826,11 @@ This is a static front-end. To go live you'll need to:
             <span class="code">LCK</span>
           </div>
           <div class="airport-item reveal">
-            <div><span class="name">Newark-Heath Airport</span></div>
+            <div><span class="name">Licking County Airport</span></div>
             <span class="code">VTA</span>
           </div>
           <div class="airport-item reveal">
-            <div><span class="name">Lancaster Municipal Airport</span></div>
+            <div><span class="name">Fairfield County Airport</span></div>
             <span class="code">LHQ</span>
           </div>
           <div class="airport-item reveal">
@@ -836,7 +838,7 @@ This is a static front-end. To go live you'll need to:
             <span class="code">DLZ</span>
           </div>
           <div class="airport-item reveal">
-            <div><span class="name">Marion Municipal Airport</span></div>
+            <div><span class="name">Union County Airport</span></div>
             <span class="code">MRT</span>
           </div>
         </div>
@@ -1036,10 +1038,10 @@ This is a static front-end. To go live you'll need to:
           <li>Ohio State University Airport (OSU)</li>
           <li>Bolton Field (TZR)</li>
           <li>Rickenbacker Intl (LCK)</li>
-          <li>Newark-Heath (VTA)</li>
-          <li>Lancaster Municipal (LHQ)</li>
+          <li>Licking County (VTA)</li>
+          <li>Fairfield County (LHQ)</li>
           <li>Delaware Municipal (DLZ)</li>
-          <li>Marion Municipal (MRT)</li>
+          <li>Union County (MRT)</li>
         </ul>
       </div>
       <div>
