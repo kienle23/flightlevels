@@ -72,6 +72,10 @@ This is a static front-end. To go live you'll need to:
     *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
   }
 
+  html, body{
+    overflow-x:hidden;
+    max-width:100%;
+  }
   body{
     font-family:var(--body);
     color:var(--ink);
@@ -163,8 +167,8 @@ This is a static front-end. To go live you'll need to:
   }
   .header-inner{
     display:flex; align-items:center; justify-content:space-between;
-    padding:14px 24px;
-    gap:24px;
+    padding:12px 16px;
+    gap:10px;
   }
   .logo{
     display:flex; flex-direction:row; align-items:center; gap:10px;
@@ -179,8 +183,15 @@ This is a static front-end. To go live you'll need to:
     font-family:var(--mono); font-size:0.62rem; letter-spacing:0.18em; color:var(--amber);
     margin-top:2px;
   }
+  @media(max-width:420px){
+    .logo .l1{font-size:0.8rem;}
+  }
+  @media(max-width:360px){
+    .logo .l1{display:none;}
+  }
   nav.main-nav{display:none;}
   @media(min-width:980px){
+    .header-inner{padding:14px 24px; gap:24px;}
     nav.main-nav{
       display:flex; gap:22px; font-size:0.9rem; font-weight:500; color:var(--steel);
       flex-wrap:nowrap; white-space:nowrap;
@@ -198,6 +209,10 @@ This is a static front-end. To go live you'll need to:
   }
   .call-pill svg{width:16px; height:16px; color:var(--amber);}
   .call-pill:hover{border-color:var(--amber);}
+  @media(max-width:420px){
+    .call-pill{font-size:0.76rem; padding:7px 10px; gap:5px;}
+    .call-pill svg{width:13px; height:13px;}
+  }
   .email-link{
     display:none; align-items:center; gap:6px;
     color:var(--steel); text-decoration:none; font-size:0.85rem;
